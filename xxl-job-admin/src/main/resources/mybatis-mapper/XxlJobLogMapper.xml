@@ -272,11 +272,10 @@
 
 	<select id="info" parameterType="java.lang.Long" resultMap="XxlJobLog">
 		select
-			a.*,b.title, c.job_desc
+			a.*, b.title
 		from
 			xxl_job_log a
 			left join xxl_job_group b on a.job_group=b.id
-			left join xxl_job_info c on c.id=a.job_id
 		where
 			a.id= #{id}
 	</select>

@@ -35,7 +35,6 @@ public class XxlJobLog {
 	private int alarmStatus;
 
 	private String title;
-	private String jobDesc;
 
 	public String getTitle() {
 		return title;
@@ -43,14 +42,6 @@ public class XxlJobLog {
 
 	public void setTitle(String title) {
 		this.title = title;
-	}
-
-	public String getJobDesc() {
-		return jobDesc;
-	}
-
-	public void setJobDesc(String jobDesc) {
-		this.jobDesc = jobDesc;
 	}
 
 	public long getId() {

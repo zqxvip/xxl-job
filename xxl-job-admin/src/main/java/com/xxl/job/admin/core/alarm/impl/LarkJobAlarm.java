@@ -27,7 +27,7 @@ public class LarkJobAlarm implements JobAlarm {
     public boolean doAlarm(XxlJobInfo info, XxlJobLog jobLog) {
         String larkBotUrl = XxlJobAdminConfig.getAdminConfig().getLarkBotUrl();
         if (StringUtils.hasLength(larkBotUrl)) {
-            larkUtil.send(larkBotUrl, StrUtil.format("执行器[{}] 任务ID[{}] \n {}", jobLog.getTitle(), jobLog.getJobDesc(), jobLog.getHandleMsg()));
+            larkUtil.send(larkBotUrl, StrUtil.format("执行器[{}] 任务[{}] \n {}", jobLog.getTitle(), info.getJobDesc(), jobLog.getHandleMsg()));
         }
         return false;
     }

@@ -6,7 +6,6 @@ import com.xxl.job.admin.dao.*;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -55,7 +54,7 @@ public class XxlJobAdminConfig implements InitializingBean, DisposableBean {
     @Value("${xxl.job.accessToken}")
     private String accessToken;
 
-    @Value("${spring.mail.from}")
+    // @Value("${spring.mail.from}")
     private String emailFrom;
 
     @Value("${xxl.job.triggerpool.fast.max}")
@@ -79,8 +78,8 @@ public class XxlJobAdminConfig implements InitializingBean, DisposableBean {
     private XxlJobGroupDao xxlJobGroupDao;
     @Resource
     private XxlJobLogReportDao xxlJobLogReportDao;
-    @Resource
-    private JavaMailSender mailSender;
+    // @Resource
+    // private JavaMailSender mailSender;
     @Resource
     private DataSource dataSource;
     @Resource
@@ -143,9 +142,9 @@ public class XxlJobAdminConfig implements InitializingBean, DisposableBean {
         return xxlJobLogReportDao;
     }
 
-    public JavaMailSender getMailSender() {
-        return mailSender;
-    }
+    // public JavaMailSender getMailSender() {
+    //     return mailSender;
+    // }
 
     public DataSource getDataSource() {
         return dataSource;
