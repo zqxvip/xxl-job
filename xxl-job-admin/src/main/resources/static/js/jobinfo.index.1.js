@@ -15,6 +15,7 @@ $(function() {
                 obj.jobDesc = $('#jobDesc').val();
 	        	obj.executorHandler = $('#executorHandler').val();
                 obj.author = $('#author').val();
+                obj.jobId = $('#jobId').val();
 	        	obj.start = d.start;
 	        	obj.length = d.length;
                 return obj;

@@ -155,4 +155,14 @@ public class XxlJobAdminConfig implements InitializingBean, DisposableBean {
         return jobAlarmer;
     }
 
+    @Value("${larkbot.url}")
+    String larkBotUrl;
+
+    public String getLarkBotUrl() {
+        return larkBotUrl;
+    }
+
+    public void setLarkBotUrl(String larkBotUrl) {
+        this.larkBotUrl = larkBotUrl;
+    }
 }
