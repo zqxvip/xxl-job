@@ -65,6 +65,7 @@ public class JobInfoController {
 
 		model.addAttribute("JobGroupList", jobGroupList);
 		model.addAttribute("jobGroup", jobGroup);
+		model.addAttribute("jobId", request.getParameter("jobId"));
 
 		return "jobinfo/jobinfo.index";
 	}

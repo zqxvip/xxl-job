@@ -107,8 +107,9 @@ $(function() {
 							temp += I18n.joblog_field_executorAddress + '：' + (row.executorAddress?row.executorAddress:'');
 							temp += jobhandler;
 							temp += '<br>'+ I18n.jobinfo_field_executorparam +'：' + row.executorParam;
-
-							return '<a class="logTips" href="javascript:;" >'+ row.jobId +'<span style="display:none;">'+ temp +'</span></a>';
+                            info = window.location.href.replace('joblog','jobinfo')+'?jobId='+row.jobId
+//							return '<a class="logTips" href="javascript:;" >'+ row.jobId +'<span style="display:none;">'+ temp +'</span></a>';
+							return '<a class="logTips" href="'+info+'" >'+ row.jobId +'<span style="display:none;">'+ temp +'</span></a>';
 						}
 					},
 					{ "data": 'jobGroup', "visible" : false},
