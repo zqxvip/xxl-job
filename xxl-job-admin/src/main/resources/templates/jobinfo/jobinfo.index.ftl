@@ -49,7 +49,7 @@
                 </div>
                 <div class="col-xs-1">
                     <div class="input-group">
-                        <input type="text" class="form-control" id="jobId" placeholder="${I18n.system_please_input}${I18n.jobinfo_field_id}" value="${jobId}" >
+                        <input type="text" class="form-control" id="jobId" placeholder="${I18n.system_please_input}${I18n.jobinfo_field_id}" value="${jobId?if_exists}"  >
                     </div>
                 </div>
                 <div class="col-xs-2">
